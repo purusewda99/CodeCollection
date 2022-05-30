@@ -55,3 +55,8 @@ int main() {
 
     return 0;
 }
+
+// Time Complexity -> O((2^n)*k)
+// Space Complexity -> O(k*x)
+// k -> avg. length of combinations
+// x -> no. of combinations

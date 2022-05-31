@@ -60,4 +60,5 @@ int main()
 }
 
 // time complexity -> O(2^n)
+//                 -> O((2^n) +(2^nlog(2^n))(only if sorting the output)) 
 // space complexity -> O(2^n)

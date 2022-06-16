@@ -44,3 +44,6 @@ int main() {
     cout << out ;
     return 0;
 }
+
+// Time Complexity - O(N)
+// Space COmplexity - O(1)

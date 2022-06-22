@@ -1,4 +1,3 @@
-// aka Nearest Greater to right
 #include<iostream> 
 #include<vector>
 #include<stack>
@@ -7,7 +6,7 @@ using namespace std;
 vector<int> nextLargestElement(vector<int> &arr) {
     vector<int> v;
     stack<int> s;
-    for(int i=arr.size()-1;i>=0;i--) {
+    for(int i=0; i<arr.size(); i++) {
         if(s.size() == 0) {
             v.push_back(-1);
         }
@@ -23,7 +22,6 @@ vector<int> nextLargestElement(vector<int> &arr) {
         }
         s.push(arr[i]);
     }
-    reverse(v.begin(), v.end());
     return v;
 }
 
@@ -32,7 +30,7 @@ int main() {
     cout << "Enter array size: ";
     cin >> n;
     vector<int> arr(n);
-    for(int i=0;i<n;i++) {
+    for(int i=0; i<n; i++) {
         int tmp;
         cin >> tmp;
         arr[i] = tmp;

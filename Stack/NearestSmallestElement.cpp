@@ -29,6 +29,7 @@ int main() {
     cout << "Enter array size: ";
     cin >> n;
     vector<int> arr(n);
+    cout << "Enter array: ";
     for(int i=0; i<n; i++) {
         int tmp;
         cin >> tmp;

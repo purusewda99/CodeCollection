@@ -2,6 +2,7 @@
 #include<iostream> 
 #include<vector>
 #include<stack>
+#include<algorithm>
 using namespace std;
 
 vector<int> nextLargestElement(vector<int> &arr) {
@@ -32,6 +33,7 @@ int main() {
     cout << "Enter array size: ";
     cin >> n;
     vector<int> arr(n);
+    cout << "Enter array: ";
     for(int i=0;i<n;i++) {
         int tmp;
         cin >> tmp;

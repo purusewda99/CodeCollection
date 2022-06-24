@@ -4,7 +4,7 @@
 #include<stack>
 using namespace std;
 
-vector<int> nextLargestElement(vector<int> &arr) {
+vector<int> nearestSmallestElement(vector<int> &arr) {
     vector<int> v;
     stack<int> s;
     int n = arr.size();
@@ -36,7 +36,7 @@ int main() {
         arr[i] = tmp;
     }
 
-    vector<int> out = nextLargestElement(arr);
+    vector<int> out = nearestSmallestElement(arr);
     cout << "Output array: ";
     for(auto x: out) {
         cout << x << " ";

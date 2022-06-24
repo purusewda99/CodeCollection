@@ -3,7 +3,7 @@
 #include<stack>
 using namespace std;
 
-vector<int> nextLargestElement(vector<int> &arr) {
+vector<int> nearestGreaterToLeft(vector<int> &arr) {
     vector<int> v;
     stack<int> s;
     for(int i=0; i<arr.size(); i++) {
@@ -37,7 +37,7 @@ int main() {
         arr[i] = tmp;
     }
 
-    vector<int> out = nextLargestElement(arr);
+    vector<int> out = nearestGreaterToLeft(arr);
     cout << "Output array: ";
     for(auto x: out) {
         cout << x << " ";

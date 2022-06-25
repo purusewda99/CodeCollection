@@ -11,6 +11,8 @@ int maximumAreaHistogram(vector<int> &arr) {
     int n = arr.size();
     vector<int> v(n);
     stack<int> s;
+
+    // Nearest Smaller to Right
     int pseudoIndx = n;
     for(int i=n-1; i>=0; i--) {
         if(s.size() == 0)
@@ -33,12 +35,15 @@ int maximumAreaHistogram(vector<int> &arr) {
 
     int j=0;
     pseudoIndx = -1;
+    // Nearest Smaller to left
     for(int i=0; i<n; i++) {
         if(s.size() == 0) {
+            // width vector
             v[j] = v[j]-pseudoIndx-1;
             j++;
         }
         else if(s.size() > 0 && arr[s.top()] < arr[i]) {
+            // width vector
             v[j] = v[j]-s.top()-1;
             j++;
         }
@@ -46,10 +51,12 @@ int maximumAreaHistogram(vector<int> &arr) {
             while(s.size() > 0 && arr[s.top()] >= arr[i])
                 s.pop();
             if(s.size() == 0) {
+                // width vector
                 v[j] = v[j]-pseudoIndx-1;
                 j++;
             }
             else {
+                // width vector
                 v[j] = v[j]-s.top()-1;
                 j++;
             }
@@ -58,6 +65,7 @@ int maximumAreaHistogram(vector<int> &arr) {
     }
 
     int mx = INT_MIN;
+    // area vector
     for(int i=0; i<n; i++) {
         v[i] *= arr[i];
         mx = max(mx, v[i]);

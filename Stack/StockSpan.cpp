@@ -1,4 +1,5 @@
 // Consecutive smaller or equal to backwards from it
+// Stock span is a variation of Nearest Greater to Left problem
 #include<iostream>
 #include<vector>
 #include<stack>
